@@ -1,12 +1,12 @@
 const CACHE_NAME = "qr-app-cache-v1";
 const urlsToCache = [
-  "/",
-  "/index.html",
-  "/style.css",
-  "/icon.png",
-  "/ewm.gif",
-  "/true.png",
-  "/jquery-1.8.0.min.js"
+  "./",
+  "./index.html",
+  "./style.css",
+  "./icon.png",
+  "./ewm.gif",
+  "./true.png",
+  "./jquery-1.8.0.min.js"
 ];
 
 self.addEventListener("install", event => {
