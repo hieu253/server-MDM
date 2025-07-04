@@ -1,4 +1,4 @@
-const CACHE_NAME = "qr-app-cache-v3"; // Đổi phiên bản để ép trình duyệt cập nhật cache
+const CACHE_NAME = "qr-app-cache-v3_1"; // Đổi phiên bản để ép trình duyệt cập nhật cache
 const urlsToCache = [
   "./",
   "./index.html",
