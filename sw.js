@@ -1,4 +1,4 @@
-const CACHE_NAME = "qr-app-cache-v1";
+const CACHE_NAME = "qr-app-cache-v2";
 const urlsToCache = [
   "./",
   "./index.html",
@@ -15,7 +15,7 @@ self.addEventListener("install", event => {
       return Promise.all(
   urlsToCache.map(url =>
     cache.add(url).catch(err => {
-      console.error("❌ LỖI cache:", url, err);
+      console.error("LỖI cache:", url, err);
     })
   )
 );
