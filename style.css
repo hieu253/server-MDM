@@ -20,7 +20,9 @@ a{text-decoration:none;}
 		.ewm{margin: 0.5rem 0 0 ;width: 580px;height: 580px}
 		.true{margin: 4rem 0 2rem ;width: 260px;height: 260px}
 		.truetxt{color:#000000}
-		.truetxt p.jinchang{font-size:3.3em;margin:0}
+		.truetxt p.jinchang{
+			     font-size:3.3em;margin:0;transform: translateZ(0);
+			     -webkit-font-smoothing: antialiased;}
 		.truetxt p.riqi{font-size:3em;margin:0 0 2rem}
 		.zise{color:#96b0a5}
 		.footsty{font-size: 2rem;padding:2rem}
