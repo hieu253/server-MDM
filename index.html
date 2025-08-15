@@ -91,10 +91,19 @@
 
     // Cập nhật hiển thị mỗi giây
     setInterval(function () {
-        let diff = Math.floor((Date.now() - startTime) / 1000);
+        let diff = Math.floor((Date.now() - startTime) / 1000); // giây
         let hrs = Math.floor(diff / 3600);
         let mins = Math.floor((diff % 3600) / 60);
         let secs = diff % 60;
+
+        // Nếu tới 12 giờ → reset
+        if (hrs >= 12) {
+            startTime = Date.now();
+            localStorage.setItem("startTime", startTime);
+            hrs = 0;
+            mins = 0;
+            secs = 0;
+        }
 
         if (hrs > 0) {
             // Nếu có giờ → h:mm:ss
@@ -110,7 +119,6 @@
         }
     }, 1000);
 </script>
-
 			
 
 			
