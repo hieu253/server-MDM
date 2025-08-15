@@ -79,14 +79,23 @@
 				}
 			</script>
 		
-			<div id="dateTime3">00:01</div>
-				 <script>
-    let seconds = 6886; // thời gian bắt đầu (tính bằng giây)
+			<div id="dateTime3">00:00:00</div>
+<script>
+    // Lấy thời điểm bắt đầu từ localStorage hoặc tạo mới
+    let startTime = localStorage.getItem("startTime");
+    if (!startTime) {
+        startTime = Date.now();
+        localStorage.setItem("startTime", startTime);
+    } else {
+        startTime = parseInt(startTime);
+    }
+
+    // Cập nhật hiển thị mỗi giây
     setInterval(function () {
-        seconds++;
-        let hrs = Math.floor(seconds / 3600);
-        let mins = Math.floor((seconds % 3600) / 60);
-        let secs = seconds % 60;
+        let diff = Math.floor((Date.now() - startTime) / 1000);
+        let hrs = Math.floor(diff / 3600);
+        let mins = Math.floor((diff % 3600) / 60);
+        let secs = diff % 60;
 
         document.getElementById('dateTime3').innerHTML =
             hrs + ':' +
