@@ -78,8 +78,7 @@
 						}, 1000);
 				}
 			</script>
-		
-			<div id="dateTime3">00:00:00</div>
+		<div id="dateTime3">00:00</div>
 <script>
     // Lấy thời điểm bắt đầu từ localStorage hoặc tạo mới
     let startTime = localStorage.getItem("startTime");
@@ -97,12 +96,21 @@
         let mins = Math.floor((diff % 3600) / 60);
         let secs = diff % 60;
 
-        document.getElementById('dateTime3').innerHTML =
-            hrs + ':' +
-            (mins < 10 ? '0' : '') + mins + ':' +
-            (secs < 10 ? '0' : '') + secs;
+        if (hrs > 0) {
+            // Nếu có giờ → h:mm:ss
+            document.getElementById('dateTime3').innerHTML =
+                hrs + ':' +
+                (mins < 10 ? '0' : '') + mins + ':' +
+                (secs < 10 ? '0' : '') + secs;
+        } else {
+            // Nếu chưa tới 1 giờ → mm:ss
+            document.getElementById('dateTime3').innerHTML =
+                (mins < 10 ? '0' : '') + mins + ':' +
+                (secs < 10 ? '0' : '') + secs;
+        }
     }, 1000);
 </script>
+
 			
 
 			
