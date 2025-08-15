@@ -80,20 +80,23 @@
 			</script>
 		
 			<div id="dateTime3">00:01</div>
-				<script>
-					let seconds = 4014;
-					setInterval(function () {
-        let now = new Date();
-        let hrs = now.getHours();
-        let mins = now.getMinutes();
-        let secs = now.getSeconds();
+				 <script>
+    let seconds = 6886; // thời gian bắt đầu (tính bằng giây)
+    setInterval(function () {
+        seconds++;
+        let hrs = Math.floor(seconds / 3600);
+        let mins = Math.floor((seconds % 3600) / 60);
+        let secs = seconds % 60;
 
         document.getElementById('dateTime3').innerHTML =
             hrs + ':' +
             (mins < 10 ? '0' : '') + mins + ':' +
             (secs < 10 ? '0' : '') + secs;
     }, 1000);
-				</script>
+</script>
+			
+
+			
 		</div>
 	</div>
 	
