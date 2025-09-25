@@ -11,7 +11,20 @@
 	<link rel="manifest" href="manifest.json">
 
 </head>
+<script>
+  // Chặn zoom bằng pinch (2 ngón) hoặc double-tap
+  document.addEventListener('gesturestart', function (e) {
+    e.preventDefault();
+  });
 
+  document.addEventListener('dblclick', function (e) {
+    e.preventDefault();
+  });
+
+  document.addEventListener('touchmove', function (e) {
+    if (e.scale !== 1) e.preventDefault(); // iOS Safari
+  }, { passive: false });
+</script>
 <body>
 <p><br><br></p>	
 <div class="zhengti">
