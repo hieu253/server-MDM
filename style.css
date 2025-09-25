@@ -10,6 +10,10 @@ body {
   -ms-user-select: none;     /* IE/Edge */
   user-select: none;         /* Chrome, Firefox, Opera */
   -webkit-touch-callout: none; /* iOS Safari */
+	
+  -webkit-text-size-adjust: 100%; /* Ngăn iOS tự phóng to/chỉnh font */
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 	{overflow:hidden;}
 a{text-decoration:none;}
