@@ -5,6 +5,11 @@ html {
 body {
   background-color: #393a4e;
   font-family: "Noto Sans", "Microsoft YaHei", "SimSun", "Tahoma", "Arial", sans-serif;
+   /* 🚫 Chặn chọn văn bản + chặn menu copy */
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none;     /* IE/Edge */
+  user-select: none;         /* Chrome, Firefox, Opera */
+  -webkit-touch-callout: none; /* iOS Safari */
 }
 	{overflow:hidden;}
 a{text-decoration:none;}
